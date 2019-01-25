@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Grid } from 'react-bootstrap';
-import { Table, Button } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import {marketList, exchangeList, startStreamingPrice, startTrading} from '../util/Actions';
 import Post from "./Post";

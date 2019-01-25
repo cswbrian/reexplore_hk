@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Dashboard from "../../components/Dashboard";
 import Main from "../../components/MapView";
 import PostList from "../../components/PostList";
 import Navbar from "../../components/Navbar";
+import MapView from "../../components/MapView";
 
 class Home extends Component {
     constructor(props) {
@@ -14,17 +15,16 @@ class Home extends Component {
 
     render() {
         return (
-            <Grid>
-                <Row className="show-grid">
-                    <Col xs={12} md={8}>
-                        <code>{'<Col xs={12} md={8} />'};</code>
+            <Container>
+                <Row>
+                    <Col md={8}>
+                        <MapView />
                     </Col>
-                    <Col xs={6} md={4}>
-                        <code>{'<Col xs={6} md={4} />'}</code>
+                    <Col md={4}>
+                        <PostList />
                     </Col>
                 </Row>
-
-            </Grid>
+            </Container>
         );
     }
 }

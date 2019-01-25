@@ -23,7 +23,7 @@ class Navbar extends Component {
         return (
             <header>
                 <div className="menu_top">
-                    <nav className="navbar navbar-default">
+                    <nav className="navbar navbar-default mb-0">
                         <div className="navbar-header">
                             <button
                                 type="button"

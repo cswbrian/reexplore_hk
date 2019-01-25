@@ -22,7 +22,14 @@ const initialState = {
     selectedSymbol: "BTCBCH",
     exchangeList: [],
     marketList: [],
-    bidAsk: {}
+    bidAsk: {},
+
+    map_zoom: 11,
+    map_center: {
+        lat: 59.95,
+        lng: 30.33
+    },
+    map_api_key: "AIzaSyBag47Azp3Bfbs9B3K4hiN8k5eIDfUSwzI"
 };
 
 
