@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {marketList, exchangeList, startStreamingPrice, startTrading} from '../../util/Actions';
+import {changeHoverPhoto} from '../../util/Actions';
+
 
 class Register extends Component {
     componentDidMount() {
@@ -9,12 +10,11 @@ class Register extends Component {
 
     onClickedStreamingPrice(e) {
         e.preventDefault();
-        this.props.dispatch(startStreamingPrice("BTCUSD"));
+
     }
 
     onClickedTrading(e) {
         e.preventDefault();
-        this.props.dispatch(startTrading("BTCUSD"));
 
     }
 
@@ -26,11 +26,11 @@ class Register extends Component {
 }
 
 function mapStateToProps(state) {
-    const { selectedSymbol, userID, marketList, exchangeList, bidAsk} = state.appInfo;
+    const { selectedSymbol, userId, marketList, exchangeList, bidAsk} = state.appInfo;
 
     return {
         selectedSymbol,
-        userID,
+        userId,
         marketList,
         exchangeList,
         bidAsk

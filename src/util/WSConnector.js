@@ -1,14 +1,7 @@
 // http://amanvirk.me/singleton-classes-in-es6/
 
 import {
-    onLogin,
-    startStreamingPrice,
-    onStartStreamingPrice,
-    exchangeList,
-    onExchangeList,
-    marketList,
-    onMarketList,
-    onBidAsk
+    onLogin
 } from './Actions'
 import {onDisconnect} from './Actions'
 import {store} from '../index.js'
@@ -124,16 +117,16 @@ class WSConnectorClass {
         let msgType = ('method' in msg)?msg.method:((msg.id!==null)?this.msgIDMap[msg.id]:"");
         switch (msgType) {
             case "server.sign": {
-                store.dispatch(onLogin(msg));
+                // store.dispatch(onLogin(msg));
             } break;
             case "bidAsk": {
-                store.dispatch(onBidAsk(msg))
+                // store.dispatch(onBidAsk(msg))
             } break;
             case "exchangeList": {
-                store.dispatch(onExchangeList(msg))
+                // store.dispatch(onExchangeList(msg))
             } break;
             case "marketList": {
-                store.dispatch(onMarketList(msg))
+                // store.dispatch(onMarketList(msg))
             }
             default: {
                 console.log("WSConnector Unknown message> " + msg)
@@ -161,9 +154,9 @@ class WSConnectorClass {
         return this.sendMsg('server.time', []);
     }
 
-    // userID: str, authorization:str, tonce:int
-    login(userID, authorization, tonce) {
-        return this.sendMsg('server.sign', [userID, authorization, tonce]);
+    // userId: str, authorization:str, tonce:int
+    login(userId, authorization, tonce) {
+        return this.sendMsg('server.sign', [userId, authorization, tonce]);
     }
 
     //------------------------------------------------------------------------------------------------------------------

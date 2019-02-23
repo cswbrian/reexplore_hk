@@ -1,0 +1,7 @@
+#root { position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100vh; }
+.whiteTextField {background: white; border-radius: 4px; height: 40px;}
+.whiteTextField2 {background: white; border-radius: 4px; height:40px;}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}

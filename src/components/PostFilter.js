@@ -1,39 +1,37 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {login} from '../../util/Actions';
+import {changeHoverPhoto} from '../util/Actions';
 
-
-class Login extends Component {
+class PostFilter extends Component {
     componentDidMount() {
-
+        //this.props.dispatch(marketList());
+        //this.props.dispatch(exchangeList());
     }
 
     onClickedStreamingPrice(e) {
         e.preventDefault();
+
     }
 
     onClickedTrading(e) {
         e.preventDefault();
 
+
     }
 
     render() {
         return (
-            <div>This is Login page</div>
+            <div>This is Post Filter</div>
         );
     }
 }
 
 function mapStateToProps(state) {
-    const { selectedSymbol, userId, marketList, exchangeList, bidAsk} = state.appInfo;
+    const { user } = state.appInfo;
 
     return {
-        selectedSymbol,
-        userId,
-        marketList,
-        exchangeList,
-        bidAsk
+        user
     }
 }
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps)(PostFilter);
