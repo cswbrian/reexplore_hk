@@ -44,7 +44,7 @@ class PostList extends Component {
 }
 
 function mapStateToProps(state) {
-    const { userId, map_photos, posts, hoverPhoto, mapHeight} = state.appInfo;
+    const { userId, map_photos, posts, hoverPhoto, mapHeight } = state.appInfo;
 
     return {
         ...state,
@@ -53,7 +53,6 @@ function mapStateToProps(state) {
         map_photos,
         hoverPhoto,
         mapHeight,
-
     }
 }
 

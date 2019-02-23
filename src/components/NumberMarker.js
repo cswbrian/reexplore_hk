@@ -21,18 +21,18 @@ class NumberMarker extends Component {
         const style = (this.props.hoverPhoto === this.props.photoId )? greatPlaceStyleHover : greatPlaceStyle;
 
         return (
-            <div className="hint hint--html hint--info hint--top" style={style}>
-                <div>{this.props.photoId}</div>
-                <div style={{width: 80}} className="hint--content">
-                    {this.props.text}
+
+                <div style={style}>
+                    <img style={{height: '50px', width:'50px'}} src={this.props.photoUrl} alt={this.props.photoUrl}/>
+                    <p>{this.props.description} </p>
                 </div>
-            </div>
+
         );
     }
 }
 
 function mapStateToProps(state) {
-    const { hoverPhoto} = state.appInfo;
+    const { hoverPhoto } = state.appInfo;
 
     return {
         hoverPhoto

@@ -10,8 +10,6 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import PropTypes from "prop-types";
 
-
-
 class Post extends Component {
     static propTypes = {
         post: PropTypes.object,
@@ -21,7 +19,6 @@ class Post extends Component {
         super(props);
         this.postPhoto = {};
     }
-
 
     componentDidMount() {
         //this.props.dispatch(marketList());

@@ -126,11 +126,10 @@ class MapView extends Component {
                                       lng={this.props.map_photos[key].lng}
                                       lat={this.props.map_photos[key].lat}
                                       photoId={this.props.map_photos[key].id}
+                                      photoUrl={this.props.map_photos[key].link}
                                       text={this.props.map_photos[key].description}/>
                     ))}
-
                     {dropPin}
-
                 </GoogleMapReact>
 
             </div>

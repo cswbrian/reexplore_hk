@@ -1,4 +1,4 @@
-const K_SIZE = '50px';
+const K_SIZE = '40px';
 
 const greatPlaceStyle = {
     // initially any map object has left top corner at lat lng coordinates

@@ -153,59 +153,88 @@ export const appInfo = (state = initialState, action) => {
             // send request to api server to get photos with parameters
 
             let photos = {
-                    1: {
-                        id: 1,
-                        lat: 22.395964,
-                        lng: 114.112449,
+                1: {
+                    id: 1,
+                    lat: 22.2816153,
+                    lng: 114.1357076,
+                    postId: 1,
+                    description: "3 University Drive",
+                    link: "https://dl.airtable.com/.attachments/dc5337845949d36e10450ae6de1b576e/ccdc4600/6263892088_096cd51ffe_o.jpg",
+                    comments: [
+                        {
+                            comment: "wow nice",
+                            creator: {
+                                name: "Tom Lee",
+                                link: "http://www.google.com",
+                                profilePic: "http://www.google.com",
+                            },
+                        },
+                        {
+                            comment: "good",
+                            creator: {
+                                name: "Michael",
+                                link: "http://www.google.com",
+                                profilePic: "http://www.google.com",
+                            },
+                        },
+                    ],
+                },
+                2: {
+                    id: 2,
+                    lat: 22.3198776,
+                    lng: 114.1649802,
+                    postId: 1,
+                    description: "Kowloon Hills",
+                    link: "https://dl.airtable.com/.attachments/fa4220e2ccd2d74365299e4e86df5ac6/e979a690/16079770472_cffb060964_h.jpg",
+                    comments: [
+                        {
+                            comment: "wow nice",
+                            creator: {
+                                name: "Tom Lee",
+                                link: "http://www.google.com",
+                                profilePic: "http://www.google.com",
+                            },
+                        },
+                        {
+                            comment: "good",
+                            creator: {
+                                name: "Michael",
+                                link: "http://www.google.com",
+                                profilePic: "http://www.google.com",
+                            },
+                        },
+                    ],
+                },
+                3: {
+                    id: 3,
+                        lat: 22.3221726,
+                        lng: 114.1703787,
                         postId: 1,
-                        description: "I am A",
-                        link: "https://www.readersdigest.ca/wp-content/uploads/sites/14/2011/01/4-ways-cheer-up-depressed-cat.jpg",
-                        comments: [
-                            {
-                                comment: "wow nice",
-                                creator: {
-                                    name: "Tom Lee",
-                                    link: "http://www.google.com",
-                                    profilePic: "http://www.google.com",
-                                },
+                        description: "Yaumatei KCR Station",
+
+                    link: "https://dl.airtable.com/.attachments/f0d133b2e6d1749fc20ce5312ebb45e6/06caf13a/16080477225_34422ced45_o.jpg",
+                    comments: [
+                        {
+                            comment: "wow nice",
+                            creator: {
+                                name: "Tom Lee",
+                                link: "http://www.google.com",
+                                profilePic: "http://www.google.com",
                             },
-                            {
-                                comment: "good",
-                                creator: {
-                                    name: "Michael",
-                                    link: "http://www.google.com",
-                                    profilePic: "http://www.google.com",
-                                },
+                        },
+                        {
+                            comment: "good",
+                            creator: {
+                                name: "Michael",
+                                link: "http://www.google.com",
+                                profilePic: "http://www.google.com",
                             },
-                        ],
-                    },
-                    2: {
-                        id: 2,
-                        lat: 22.408264,
-                        lng: 114.110047,
-                        postId: 1,
-                        description: "I am B",
-                        link: "https://r.hswstatic.com/w_907/gif/tesla-cat.jpg",
-                        comments: [
-                            {
-                                comment: "wow nice",
-                                creator: {
-                                    name: "Tom Lee",
-                                    link: "http://www.google.com",
-                                    profilePic: "http://www.google.com",
-                                },
-                            },
-                            {
-                                comment: "good",
-                                creator: {
-                                    name: "Michael",
-                                    link: "http://www.google.com",
-                                    profilePic: "http://www.google.com",
-                                },
-                            },
-                        ],
-                    }
-                };
+                        },
+                    ],
+                }
+            };
+
+                
             return {
                 ...state,
                 map_photos: photos,
